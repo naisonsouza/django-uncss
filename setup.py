@@ -1,7 +1,5 @@
 import uncss
-import os
 from setuptools import setup, find_packages
-from distutils.util import convert_path
 
 
 with open('requirements.txt') as f:
