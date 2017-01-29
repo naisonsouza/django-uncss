@@ -4,13 +4,13 @@ testenv:
 	pip install Django
 
 flake8:
-	flake8 uncss
+	flake8 uncss --exclude=tests*
 
 runtests:
 	coverage run --branch --source=uncss `which django-admin.py` test --settings=uncss.tests.settings uncss
 
 coveragereport:
-	coverage report --omit=uncss/test*
+	coverage report --omit=uncss/tests*
 
 test: flake8 runtests coveragereport
 
