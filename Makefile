@@ -13,6 +13,6 @@ coveragereport:
 	coverage xml --omit=uncss/test*
 	python-codacy-coverage -r coverage.xml
 
-test: flake8 runtests coveragereport
+test: testenv flake8 runtests coveragereport
 
 .PHONY: test runtests flake8 coveragereport
