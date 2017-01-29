@@ -10,7 +10,8 @@ runtests:
 	coverage run --branch --source=uncss `which django-admin.py` test --settings=uncss.tests.settings uncss
 
 coveragereport:
-	coverage report --omit=uncss/test*
+	coverage xml --omit=uncss/test*
+	python-codacy-coverage -r coverage.xml
 
 test: flake8 runtests coveragereport
 

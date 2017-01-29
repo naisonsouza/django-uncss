@@ -4,3 +4,4 @@ mock
 tox
 flake8==2.4.0
 coverage==3.7.1
+codacy-coverage
