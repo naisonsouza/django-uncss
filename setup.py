@@ -15,7 +15,7 @@ setup(
     author='Naison Souza',
     author_email='naison.souza@gmail.com',
     license='BSD',
-    description='Django Uncss.',
+    description='Remove unused styles from CSS django applications!',
     long_description=readme,
     keywords=['uncss', 'performance'],
     url='https://github.com/naisonsouza/django-uncss',
