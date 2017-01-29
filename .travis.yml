@@ -3,7 +3,7 @@ sudo: false
 install:
   - pip install tox
 script:
-  - tox -e $TOX_ENV
+  - tox
 env:
   - TOXENV=py27-django1.8
   - TOXENV=py27-django1.9
