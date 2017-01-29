@@ -5,19 +5,17 @@ install:
 script:
   - tox
 env:
-  - TOXENV=py27-1.8.X
-  - TOXENV=py27-1.9.X
-  - TOXENV=py27-1.10.X
-  - TOXENV=py32-1.8.X
-  - TOXENV=py33-1.8.X
-  - TOXENV=py34-1.8.X
-  - TOXENV=py34-1.9.X
-  - TOXENV=py34-1.10.X
+  - TOXENV=py27-django1.8
+  - TOXENV=py27-django1.9
+  - TOXENV=py27-django1.10
+  - TOXENV=py34-django1.8
+  - TOXENV=py34-django1.9
+  - TOXENV=py34-django1.10
 matrix:
   include:
     - python: 3.5
-      env: TOXENV=py35-1.8.X
+      env: TOXENV=py35-django1.8
     - python: 3.5
-      env: TOXENV=py35-1.9.X
+      env: TOXENV=py35-django1.9
     - python: 3.5
-      env: TOXENV=py35-1.10.X
+      env: TOXENV=py35-django1.10
