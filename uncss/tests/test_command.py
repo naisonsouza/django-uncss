@@ -1,7 +1,5 @@
 from django.test import TestCase, override_settings
-from django.core import management
 from django.conf import settings
-from django.core.management.base import CommandError
 from uncss.management.commands.uncss import Command
 from django.template.loaders.filesystem import Loader
 
