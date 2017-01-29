@@ -1,5 +1,7 @@
-from setuptools import setup
 import uncss
+import os
+from setuptools import setup, find_packages
+from distutils.util import convert_path
 
 
 with open('requirements.txt') as f:
@@ -8,15 +10,16 @@ with open('requirements.txt') as f:
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
+
 setup(
-    name='django-storages',
+    name='django-uncss',
     version=uncss.__version__,
-    packages=['uncss'],
     author='Naison Souza',
     author_email='naison.souza@gmail.com',
     license='BSD',
     description='Remove unused styles from CSS django applications!',
     long_description=readme,
+    packages=find_packages(exclude=['*.tests']),
     keywords=['uncss', 'performance'],
     url='https://github.com/naisonsouza/django-uncss',
     classifiers=[
