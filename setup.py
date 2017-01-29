@@ -11,7 +11,7 @@ with open('README.rst') as readme_file:
 setup(
     name='django-storages',
     version=uncss.__version__,
-    packages=['uncss', 'storages.backends'],
+    packages=['uncss'],
     author='Naison Souza',
     author_email='naison.souza@gmail.com',
     license='BSD',
