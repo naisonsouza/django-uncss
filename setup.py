@@ -2,8 +2,8 @@ import uncss
 from setuptools import setup, find_packages
 
 
-with open('requirements.txt') as f:
-    requirements = f.readlines()
+with open('requirements-tests.txt') as f:
+    requirements_tests = f.readlines()
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -38,6 +38,6 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],
-    tests_require=requirements,
+    tests_require=requirements_tests,
     zip_safe=False
 )
