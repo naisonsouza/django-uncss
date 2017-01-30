@@ -22,11 +22,19 @@ class CommandTest(TestCase):
             self.assertEqual(1, len(self.command.get_loaders()))
             self.assertTrue(isinstance(self.command.get_loaders()[0], Loader))
 
-    def test_get_templates(self):
+    def test_get_templates_html(self):
         templates = self.command.get_templates(['html'])
         templates_test = [
             'base.html',
             'content.html',
         ]
         self.assertEqual(2, len(templates))
+        self.assertTrue(all([os.path.basename(path) in templates_test for path in templates]))
+
+    def test_get_templates_txt(self):
+        templates = self.command.get_templates(['txt'])
+        templates_test = [
+            'template.txt',
+        ]
+        self.assertEqual(1, len(templates))
         self.assertTrue(all([os.path.basename(path) in templates_test for path in templates]))
